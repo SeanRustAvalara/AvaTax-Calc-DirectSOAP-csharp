@@ -27,24 +27,14 @@ Contents:
 <tr><td>AdjustTaxTest</td><td>Demonstrates an AdjustTax call to modify a previously committed transaction. If it's not committed continue to use GetTax to update the document.</td></tr>
 <tr><td>CancelTaxTest</td><td>Demonstrates the CancelTax method used to <a href="http://developer.avalara.com/api-docs/api-reference/canceltax">void a document</a>.</td></tr>
 <tr><td>ValidateAddressTest</td><td>Demonstrates the Validate method to <a href="http://developer.avalara.com/api-docs/api-reference/address-validation">normalize an address</a>.</td></tr>
-<th colspan="2" align=left>Core Classes</th>
-<tr><td>Avalara.AvaTax.Adapter.dll</td><td>-</td></tr>
 <th colspan="2" align=left>Other Files</th>
 <tr><td>.gitattributes</td><td>-</td></tr>
 <tr><td>.gitignore</td><td>-</td></tr>
-<tr><td>AvaTax-SOAP-CPP.sln</td><td>-</td></tr>
+<tr><td>AvaTax-Calc-DirectSOAP-csharp.sln</td><td>-</td></tr>
 <tr><td>LICENSE.md</td><td>-</td></tr>
 <tr><td>README.md</td><td>-</td></tr>
 </table>
 Dependencies:
 -----------
-- .NET 2.0 or later
-- Avalara.AvaTax.Adapter.DLL (included in sample)
-
-
-Requirements:
-----------
-- Some versions of Visual Studio have trouble finding the included Avalara.AvaTax.Adapter.dll - you may need to re-add this file to your project references after downloading the sample.
-- Authentication requires an valid **Account Number** and **License Key**, which should be entered in the test file (e.g. GetTaxTest.cs) you would like to run.
-- If you do not have an AvaTax account, a free trial account can be acquired through our [developer site](http://developer.avalara.com/api-get-started)
- 
+- .NET 2.0
+- Microsoft.Web.Services3.dll
