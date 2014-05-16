@@ -1,19 +1,9 @@
 AvaTax-Calc-DirectSOAP-csharp
 =====================
 
-This is a C# sample demonstrating the [AvaTax SOAP API](http://developer.avalara.com/api-docs/soap) methods using a direct implementation from the WSDL:
+This is a C# sample demonstrating the [AvaTax SOAP API](http://developer.avalara.com/api-docs/soap) methods using a direct implementation from the WSDLs:
 
 For more information on the use of these methods and the AvaTax product, please visit our [developer site](http://developer.avalara.com/) or [homepage](http://www.avalara.com/)
- 
-// The AvaTax SOAP code base is still based on legacy code and   //
-// expects to receive the password in the XML SOAP message in    //
-// plain text. Since that is no longer supported in versions of  //
-// the .NET framework beyond 2.0, this project is set to use     //
-// .NET 2.0 along with Microsoft WSE 3.0. Unfortunately,         //
-//          //
-// This will need to be changed any time you create or refresh   //
-// the web reference. You will also need to  //
-///////////////////////////////////////////////////////////////////
  
 Requirements:
 ----------
@@ -22,7 +12,7 @@ Requirements:
 - Set a project as the StartUp project to run that test. This is done by right-clicking on the project name in the solution explorer and selecting "Set as StartUp Project". PingTest is the default StartUp project.
 - If you're using a paid account instead of a free trial account, you will also need to change the CompanyCode in some files. The default value we have entered is APITrialCompany.
 - You will need to install [WSE 3.0](http://www.microsoft.com/en-us/download/details.aspx?id=14089) from Microsoft and reference the Microsoft.Web.Services3.dll. 
-- Visual Studio 2008 and later consume WSDLs using post-.NET 2.0 tools, so the web service in the generated Reference.cs file is defined as System.Web.Services.Protocols.SoapHttpClientProtocol instead of Microsoft.Web.Services3.WebServicesClientProtocol.
+- Visual Studio 2008 and later consume WSDLs using post-.NET 2.0 tools, so the web service in the generated Reference.cs file is defined as System.Web.Services.Protocols.SoapHttpClientProtocol instead of Microsoft.Web.Services3.WebServicesClientProtocol. You will need to change this in References.cs any time you create or update the web service reference.
   
 Contents:
 ----------
