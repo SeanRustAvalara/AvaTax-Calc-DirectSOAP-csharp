@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="AvaTax_Calc_DirectSOAP_csharp.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="AvaTax_Calc_DirectSOAP_csharp_TaxService_TaxSvc" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://development.avalara.net/Tax/TaxSvc.asmx</Value>
+    </Setting>
+    <Setting Name="AvaTax_Calc_DirectSOAP_csharp_AddressService_AddressSvc" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://development.avalara.net/Address/AddressSvc.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
