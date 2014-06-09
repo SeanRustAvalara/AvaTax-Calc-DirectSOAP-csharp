@@ -7,3 +7,9 @@ C:\Users\sean.rust\Documents\Visual Studio 2010\Projects\AvaTax-Calc-DirectSOAP-
 C:\Users\sean.rust\Documents\GitHub\AvaTax-Calc-DirectSOAP-csharp\AvaTax-Calc-DirectSOAP-csharp\bin\Debug\AvaTax-Calc-DirectSOAP-csharp.exe.config
 C:\Users\sean.rust\Documents\GitHub\AvaTax-Calc-DirectSOAP-csharp\AvaTax-Calc-DirectSOAP-csharp\obj\x86\Debug\AvaTax-Calc-DirectSOAP-csharp.exe
 C:\Users\sean.rust\Documents\GitHub\AvaTax-Calc-DirectSOAP-csharp\AvaTax-Calc-DirectSOAP-csharp\obj\x86\Debug\AvaTax-Calc-DirectSOAP-csharp.pdb
+C:\Avalara\Programming\working directory\AvaTax-Calc-DirectSOAP-csharp\AvaTax-Calc-DirectSOAP-csharp\bin\Debug\AvaTax-Calc-DirectSOAP-csharp.exe.config
+C:\Avalara\Programming\working directory\AvaTax-Calc-DirectSOAP-csharp\AvaTax-Calc-DirectSOAP-csharp\obj\x86\Debug\AvaTax-Calc-DirectSOAP-csharp.exe
+C:\Avalara\Programming\working directory\AvaTax-Calc-DirectSOAP-csharp\AvaTax-Calc-DirectSOAP-csharp\obj\x86\Debug\AvaTax-Calc-DirectSOAP-csharp.pdb
+C:\Avalara\Programming\working directory\AvaTax-Calc-DirectSOAP-csharp\AvaTax-Calc-DirectSOAP-csharp\bin\Debug\AvaTax-Calc-DirectSOAP-csharp.exe
+C:\Avalara\Programming\working directory\AvaTax-Calc-DirectSOAP-csharp\AvaTax-Calc-DirectSOAP-csharp\bin\Debug\AvaTax-Calc-DirectSOAP-csharp.pdb
+C:\Avalara\Programming\working directory\AvaTax-Calc-DirectSOAP-csharp\AvaTax-Calc-DirectSOAP-csharp\obj\x86\Debug\AvaTax-Calc-DirectSOAP-csharp.csprojResolveAssemblyReference.cache

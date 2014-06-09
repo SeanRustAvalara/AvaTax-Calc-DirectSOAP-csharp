@@ -4,9 +4,10 @@ namespace AvaTax_Calc_DirectSOAP_csharp
 {
     class Program
     {
-        public static void Main(string[] args)
+        public static void Main()
         {
             PingTest.Test();
+            IsAuthorizedTest.Test();
             GetTaxTest.Test();
             PostTaxTest.Test();
             CommitTaxTest.Test();

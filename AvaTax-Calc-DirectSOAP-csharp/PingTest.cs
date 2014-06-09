@@ -13,19 +13,17 @@ namespace AvaTax_Calc_DirectSOAP_csharp
     {
         public static void Test()
         {
-            const string ACCOUNTNUMBER = "1234567890";
-            const string LICENSEKEY = "A1B2C3D4E5F6G7H8";
-            const string SERVICEURL = "https://development.avalara.net";
-            const string ENDPOINT = "/tax/taxsvc.asmx";
-
-            Console.WriteLine("Begin PingTest...");
+            string accountNumber = "1234567890";
+            string licenseKey = "A1B2C3D4E5F6G7H8";
+            string serviceUrl = "https://development.avalara.net";
+            string endpoint = "/tax/taxsvc.asmx";
 
             try
             {
                 TaxSvc taxSvc = new TaxSvc();
-                taxSvc.Url = SERVICEURL + ENDPOINT;
+                taxSvc.Url = serviceUrl + endpoint;
 
-                UsernameToken token = new UsernameToken(ACCOUNTNUMBER, LICENSEKEY, PasswordOption.SendPlainText);
+                UsernameToken token = new UsernameToken(accountNumber, licenseKey, PasswordOption.SendPlainText);
                 SoapContext requestContext = taxSvc.RequestSoapContext;
                 requestContext.Security.Tokens.Add(token);
                 requestContext.Security.Timestamp.TtlInSeconds = 300;
@@ -36,13 +34,13 @@ namespace AvaTax_Calc_DirectSOAP_csharp
                 
                 PingResult pingResult = taxSvc.Ping("");
                       
-                Console.WriteLine("Result: {0}", pingResult.ResultCode.ToString());
+                Console.WriteLine("PingTest Result: {0}", pingResult.ResultCode.ToString());
 
                 if (pingResult.ResultCode != SeverityLevel.Success)
                 {
                     foreach (Message message in pingResult.Messages)
                     {
-                        Console.WriteLine("{0}{1}{2}",
+                        Console.WriteLine("{0}\n{1}\n{2}",
                             message.Name,
                             message.Summary,
                             message.Details);
@@ -55,10 +53,8 @@ namespace AvaTax_Calc_DirectSOAP_csharp
             }
             catch (Exception e)
             {
-                Console.WriteLine("Exception {0}", e.Message);
+                Console.WriteLine("Exception: {0}", e.Message);
             }
-            Console.WriteLine("End PingTest. Press enter to continue.");
-            Console.ReadLine();
         }
     }
 }

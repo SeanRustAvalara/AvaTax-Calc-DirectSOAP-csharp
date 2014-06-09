@@ -13,20 +13,18 @@ namespace AvaTax_Calc_DirectSOAP_csharp
     {
         public static void Test()
         {
-            const string ACCOUNTNUMBER = "1234567890";
-            const string LICENSEKEY = "A1B2C3D4E5F6G7H8";
-            const string SERVICEURL = "https://development.avalara.net";
-            const string ENDPOINT = "/address/addresssvc.asmx";
-
-            Console.WriteLine("Begin ValidateAddressTest...");
+            string accountNumber = "1234567890";
+            string licenseKey = "A1B2C3D4E5F6G7H8";
+            string serviceUrl = "https://development.avalara.net";
+            string endpoint = "/address/addresssvc.asmx";
 
             try
             {
                 AddressSvc addressSvc = new AddressSvc();
-                addressSvc.Url = SERVICEURL + ENDPOINT;
+                addressSvc.Url = serviceUrl + endpoint;
 
                 UsernameToken token = new UsernameToken(
-                    ACCOUNTNUMBER, LICENSEKEY, PasswordOption.SendPlainText);
+                    accountNumber, licenseKey, PasswordOption.SendPlainText);
                 SoapContext requestContext = addressSvc.RequestSoapContext;
                 requestContext.Security.Tokens.Add(token);
                 requestContext.Security.Timestamp.TtlInSeconds = 300;
@@ -60,7 +58,7 @@ namespace AvaTax_Calc_DirectSOAP_csharp
 
                 ValidateResult validateResult = addressSvc.Validate(validateRequest);
 
-                Console.WriteLine("Result: {0}", validateResult.ResultCode.ToString());
+                Console.WriteLine("ValidateAddressTest Result: {0}", validateResult.ResultCode.ToString());
                 Console.WriteLine();
 
                 if (validateResult.ResultCode != SeverityLevel.Success)
@@ -93,9 +91,8 @@ namespace AvaTax_Calc_DirectSOAP_csharp
             }
             catch (Exception e)
             {
-                Console.WriteLine("Exception {0}\n{1}", e.Message, e.StackTrace);
+                Console.WriteLine("Exception: {0}", e.Message);
             }
-            Console.WriteLine("End ValidateAddressTest.");
         }
     }
 }
