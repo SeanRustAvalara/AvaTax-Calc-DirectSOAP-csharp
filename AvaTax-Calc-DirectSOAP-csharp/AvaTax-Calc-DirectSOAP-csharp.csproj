@@ -66,7 +66,6 @@
     <Compile Include="CommitTaxTest.cs" />
     <Compile Include="GetTaxHistoryTest.cs" />
     <Compile Include="GetTaxTest.cs" />
-    <Compile Include="IsAuthorizedTest.cs" />
     <Compile Include="PingTest.cs" />
     <Compile Include="PostTaxTest.cs" />
     <Compile Include="Program.cs" />

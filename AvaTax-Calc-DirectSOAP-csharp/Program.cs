@@ -7,7 +7,6 @@ namespace AvaTax_Calc_DirectSOAP_csharp
         public static void Main()
         {
             PingTest.Test();
-            IsAuthorizedTest.Test();
             GetTaxTest.Test();
             PostTaxTest.Test();
             CommitTaxTest.Test();

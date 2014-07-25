@@ -678,6 +678,12 @@ namespace AvaTax_Calc_DirectSOAP_csharp.TaxService {
         
         /// <remarks/>
         InventoryTransferInvoice,
+        
+        /// <remarks/>
+        ReverseChargeOrder,
+        
+        /// <remarks/>
+        ReverseChargeInvoice,
     }
     
     /// <remarks/>
