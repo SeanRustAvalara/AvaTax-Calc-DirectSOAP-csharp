@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Net;
+using System.Configuration;
 using Microsoft.Web.Services3;
 using Microsoft.Web.Services3.Security;
 using Microsoft.Web.Services3.Security.Tokens;
@@ -13,17 +11,19 @@ namespace AvaTax_Calc_DirectSOAP_csharp
     {
         public static void Test()
         {
-            string accountNumber = "1234567890";
-            string licenseKey = "A1B2C3D4E5F6G7H8";
-            string serviceUrl = "https://development.avalara.net";
+            string accountNumber = ConfigurationManager.AppSettings["AvaTax:AccountNumber"];
+            string licenseKey = ConfigurationManager.AppSettings["AvaTax:LicenseKey"];
+            string serviceUrl = ConfigurationManager.AppSettings["AvaTax:ServiceUrl"];
             string endpoint = "/tax/taxsvc.asmx";
 
             try
             {
                 TaxSvc taxSvc = new TaxSvc();
+
                 taxSvc.Url = serviceUrl + endpoint;
 
-                UsernameToken token = new UsernameToken(accountNumber, licenseKey, PasswordOption.SendPlainText);
+                UsernameToken token = new UsernameToken(
+                    accountNumber, licenseKey, PasswordOption.SendPlainText);
                 SoapContext requestContext = taxSvc.RequestSoapContext;
                 requestContext.Security.Tokens.Add(token);
                 requestContext.Security.Timestamp.TtlInSeconds = 300;
